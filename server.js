@@ -27,6 +27,7 @@ app.get(
   }
 );
 
+// Another way of chaining route handlers
 const one = (req, res, next) => {
   console.log("one");
   next();
@@ -40,6 +41,7 @@ const three = (req, res) => {
   res.send("Finished!");
 };
 
+// using all the functions in one route handler
 app.get("/chain(.html)?", [one, two, three]);
 
 // if it doesn't find the route specified
