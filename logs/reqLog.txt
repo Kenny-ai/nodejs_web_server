@@ -12,3 +12,38 @@
 20220929	18:53:25	af6cb200-5c77-453c-ba20-efaf8cce36c7	/css/style.css	GET
 20220929	18:53:30	af6cb200-5c77-453c-ba20-efaf8cce36c7	/	GET
 20220929	18:53:30	af6cb200-5c77-453c-ba20-efaf8cce36c7	/css/style.css	GET
+20220930	09:37:51	870dfd78-1e1e-46e4-b30a-b1ebfcffb235	GET	undefined	/new-page}
+20220930	09:37:51	870dfd78-1e1e-46e4-b30a-b1ebfcffb235	GET	undefined	/css/style.css}
+20220930	09:37:51	870dfd78-1e1e-46e4-b30a-b1ebfcffb235	GET	undefined	/img/img1.jpg}
+20220930	09:41:31	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	GET	undefined	/new-page}
+20220930	09:41:32	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	GET	undefined	/css/style.css}
+20220930	09:41:32	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	GET	undefined	/img/img1.jpg}
+20220930	09:41:53	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	GET	undefined	/}
+20220930	09:41:53	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	GET	undefined	/css/style.css}
+20220930	09:56:09	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	OPTIONS	https://www.google.com	/}
+20220930	09:56:09	8279ec12-ba1c-4ed9-a4ff-e965025d0d14	GET	https://www.google.com	/}
+20220930	09:58:29	84115d34-631e-4929-b2fe-4a391f9fa005	OPTIONS	https://www.google.com	/}
+20220930	09:58:29	84115d34-631e-4929-b2fe-4a391f9fa005	GET	https://www.google.com	/}
+20220930	09:58:41	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	OPTIONS	https://www.google.com	/}
+20220930	09:58:41	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	GET	https://www.google.com	/}
+20220930	10:04:21	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	OPTIONS	https://www.google.com	/}
+20220930	10:04:21	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	GET	https://www.google.com	/}
+20220930	10:04:23	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	GET	https://www.google.com	/}
+20220930	10:04:44	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	OPTIONS	https://www.google.com	/}
+20220930	10:04:44	8cc6c4af-be6b-422e-9bc5-0c51f850be3e	GET	https://www.google.com	/}
+20220930	10:06:02	4c404985-71b4-4672-a97d-0ce891251782	OPTIONS	https://www.google.com	/}
+20220930	10:06:02	4c404985-71b4-4672-a97d-0ce891251782	GET	https://www.google.com	/}
+20220930	10:07:08	b9cac9c6-cff8-4809-894d-337aec459ff3	OPTIONS	https://www.google.com	/}
+20220930	10:07:08	b9cac9c6-cff8-4809-894d-337aec459ff3	GET	https://www.google.com	/}
+20220930	10:07:38	6fb6344e-b1d0-4980-ace3-0e0babfcb855	OPTIONS	https://www.google.com	/}
+20220930	10:07:38	6fb6344e-b1d0-4980-ace3-0e0babfcb855	GET	https://www.google.com	/}
+20220930	10:12:54	f61e4ff5-3157-4211-b64e-1d5d939d72de	GET	undefined	/}
+20220930	10:13:16	8e276415-3ac4-412d-8d4c-bdb938bad187	GET	undefined	/}
+20220930	10:13:16	8e276415-3ac4-412d-8d4c-bdb938bad187	GET	undefined	/css/style.css}
+20220930	10:18:03	f4579f42-9168-456e-9373-0318f253f160	GET	undefined	/}
+20220930	10:18:24	f4579f42-9168-456e-9373-0318f253f160	GET	undefined	/}
+20220930	10:18:27	f4579f42-9168-456e-9373-0318f253f160	GET	undefined	/}
+20220930	10:18:32	5afd3a9d-be54-479a-985e-9508a568dd8e	GET	undefined	/}
+20220930	10:18:32	5afd3a9d-be54-479a-985e-9508a568dd8e	GET	undefined	/css/style.css}
+20220930	10:31:15	9e49bdd2-2747-4253-80af-bafd5e20d68f	GET	undefined	/kenny}
+20220930	10:31:15	9e49bdd2-2747-4253-80af-bafd5e20d68f	GET	undefined	/css/style.css}
