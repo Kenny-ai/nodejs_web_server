@@ -85,3 +85,6 @@
 20221003	09:19:39	846a5cac-b7ce-44dd-9aac-9b2cfe6a4fc5	DELETE	undefined	/employees}
 20221003	09:20:47	846a5cac-b7ce-44dd-9aac-9b2cfe6a4fc5	GET	undefined	/employees/1}
 20221003	09:20:59	846a5cac-b7ce-44dd-9aac-9b2cfe6a4fc5	GET	undefined	/employees/2}
+20221003	10:16:09	1b48b9d9-b45d-4e65-9cc5-7f197e3fc549	GET	undefined	/employees}
+20221003	10:16:12	1b48b9d9-b45d-4e65-9cc5-7f197e3fc549	GET	undefined	/favicon.ico}
+20221003	10:18:36	1b48b9d9-b45d-4e65-9cc5-7f197e3fc549	GET	undefined	/employees/1}

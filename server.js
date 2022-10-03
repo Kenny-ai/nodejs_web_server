@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const corsOptions = require("./config/corsOptions");
 const path = require("path");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
@@ -9,19 +10,6 @@ const PORT = process.env.PORT || 3500;
 // custom middleware logger
 app.use(logger);
 
-// the whilelist is an array of domains that can access the server
-const whitelist = ["https://www.site.com", "http://localhost:3500"];
-const corsOptions = {
-  origin: (origin, callback) => {
-    // remove !== origin after develpoment
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  optionsSuccessStatus: 200,
-};
 app.use(cors(corsOptions));
 
 // built-in middleware to handle urlencoded data in other words,form data
