@@ -34,46 +34,12 @@ app.use(express.json());
 // serve static files
 // this serves all the files in the public folder (css, images and more...)
 app.use(express.static(path.join(__dirname, "/public")));
+app.use("/subdir", express.static(path.join(__dirname, "/public")));
 
-app.get("^/$|/index(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
-
-app.get("/new-page(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "new-page.html"));
-});
-app.get("/old-page(.html)?", (req, res) => {
-  res.redirect(301, "/new-page.html");
-});
-
-// Chaining Route handlers
-app.get(
-  "/hello(.html)?",
-  (req, res, next) => {
-    console.log("attempted to load hello.html");
-    next(); // this calls the next route handler below
-  },
-  (req, res) => {
-    res.send("Hello world");
-  }
-);
-
-// Another way of chaining route handlers
-const one = (req, res, next) => {
-  console.log("one");
-  next();
-};
-const two = (req, res, next) => {
-  console.log("two");
-  next();
-};
-const three = (req, res) => {
-  console.log("three");
-  res.send("Finished!");
-};
-
-// using all the functions in one route handler
-app.get("/chain(.html)?", [one, two, three]);
+// using routers created in routes dir
+app.use("/", require("./routes/root"));
+app.use("/subdir", require("./routes/subdir"));
+app.use("/employees", require("./routes/api/employees"));
 
 // if it doesn't find the route specified
 app.all("/*", (req, res) => {
@@ -91,3 +57,32 @@ app.all("/*", (req, res) => {
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Chaining Route handlers
+// app.get(
+//   "/hello(.html)?",
+//   (req, res, next) => {
+//     console.log("attempted to load hello.html");
+//     next(); // this calls the next route handler below
+//   },
+//   (req, res) => {
+//     res.send("Hello world");
+//   }
+// );
+
+// // Another way of chaining route handlers
+// const one = (req, res, next) => {
+//   console.log("one");
+//   next();
+// };
+// const two = (req, res, next) => {
+//   console.log("two");
+//   next();
+// };
+// const three = (req, res) => {
+//   console.log("three");
+//   res.send("Finished!");
+// };
+
+// // using all the functions in one route handler
+// app.get("/chain(.html)?", [one, two, three]);
