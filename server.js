@@ -22,11 +22,9 @@ app.use(express.json());
 // serve static files
 // this serves all the files in the public folder (css, images and more...)
 app.use(express.static(path.join(__dirname, "/public")));
-app.use("/subdir", express.static(path.join(__dirname, "/public")));
 
 // using routers created in routes dir
 app.use("/", require("./routes/root"));
-app.use("/subdir", require("./routes/subdir"));
 app.use("/employees", require("./routes/api/employees"));
 
 // if it doesn't find the route specified
