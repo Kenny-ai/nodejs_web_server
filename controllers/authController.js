@@ -6,6 +6,11 @@ const usersDB = {
 };
 const bcrypt = require("bcrypt");
 
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+const fsPromises = require("fs").promises;
+const path = require("path");
+
 const handleLogin = async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password)
@@ -20,7 +25,36 @@ const handleLogin = async (req, res) => {
   const match = await bcrypt.compare(password, foundUser.password);
   if (match) {
     // this is where we would create JWTs
-    res.json({ success: `User ${username} is logged in` });
+    const accessToken = jwt.sign(
+      { username: foundUser.username },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "30m" }
+    );
+    const refreshToken = jwt.sign(
+      { username: foundUser.username },
+      process.env.REFRESH_TOKEN_SECRET,
+      { expiresIn: "1d" }
+    );
+    // Adding refresh token to current user object
+    const otherUsers = usersDB.users.filter(
+      (person) => person.username !== foundUser.username
+    );
+    const currentUser = { ...foundUser, refreshToken };
+    usersDB.setUsers([...otherUsers, currentUser]);
+    await fsPromises.writeFile(
+      path.join(__dirname, "..", "model", "users.json"),
+      JSON.stringify(usersDB.users)
+    );
+    res
+      .status(201)
+      .json({ accessToken })
+      .cookie("jwt", refreshToken, {
+        domain: "http://localhost:3000",
+        httpOnly: true,
+        sameSite: "None",
+        secure: true,
+        maxAge: 24 * 60 * 60 * 1000,
+      }); // in prod, make sure to add secure:true to only serve on https rather than http
   } else {
     res.sendStatus(401);
   }
