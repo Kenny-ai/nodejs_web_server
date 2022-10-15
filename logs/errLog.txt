@@ -3,3 +3,17 @@
 20220930	10:18:24	f4579f42-9168-456e-9373-0318f253f160	Error: Not allowed by CORS
 20220930	10:18:27	f4579f42-9168-456e-9373-0318f253f160	Error: Not allowed by CORS
 20220930	19:58:40	6a1545c9-3125-46b0-8e8f-87718830856a	SyntaxError: Unexpected token , in JSON at position 35
+20221010	19:13:54	a05a143d-4eb7-4a57-b92e-da2cbee4985c	TypeError: allowedOrigins.includes is not a function
+20221010	19:14:55	f714df43-41db-428f-a790-b6db74f54f20	TypeError: allowedOrigins.includes is not a function
+20221010	19:17:06	6d4f8c9c-da3c-499c-a87f-2f8dae7a7949	TypeError: allowedOrigins.includes is not a function
+20221010	19:17:12	6d4f8c9c-da3c-499c-a87f-2f8dae7a7949	TypeError: allowedOrigins.includes is not a function
+20221010	19:18:24	a62ffc91-0eeb-4f90-95bb-82b918794787	TypeError: allowedOrigins.includes is not a function
+20221010	19:18:26	a62ffc91-0eeb-4f90-95bb-82b918794787	TypeError: allowedOrigins.includes is not a function
+20221010	19:45:38	f001f099-d7dd-4c5c-8c3c-1b7df2d05884	TypeError: res.send.json is not a function
+20221010	20:33:31	df38b1f9-b101-43e8-b2ae-0ba3259d3412	Error: Cannot set headers after they are sent to the client
+20221011	21:47:19	76277a1c-2890-4140-b23f-d29ac713c27a	Error: Not allowed by CORS
+20221011	21:47:22	76277a1c-2890-4140-b23f-d29ac713c27a	Error: Not allowed by CORS
+20221011	21:48:03	e0e522fb-6568-4e51-b617-3189eecac5cb	Error: Not allowed by CORS
+20221011	21:49:04	91a26e06-2a3c-4c54-81cc-3b8357e51f1d	Error: Not allowed by CORS
+20221011	21:49:31	91a26e06-2a3c-4c54-81cc-3b8357e51f1d	Error: Not allowed by CORS
+20221011	22:20:23	16cb0d72-35c4-46de-9983-0133fdb9a7fe	SyntaxError: Unexpected token c in JSON at position 0
