@@ -1,14 +1,22 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const corsOptions = require("./config/corsOptions");
+const { corsOptions } = require("./config/corsOptions");
 const path = require("path");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
+const verifyJWT = require("./middleware/verifyJWT");
+const { credentials } = require("./middleware/credentials");
+const cookieParser = require("cookie-parser");
+
 const PORT = process.env.PORT || 3500;
 
 // custom middleware logger
 app.use(logger);
+
+// Handle options credentials check before CORS
+// and fetch coockie credentials requirement
+app.use(credentials);
 
 app.use(cors(corsOptions));
 
@@ -19,6 +27,9 @@ app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json
 app.use(express.json());
 
+// middleware for cookies
+app.use(cookieParser());
+
 // serve static files
 // this serves all the files in the public folder (css, images and more...)
 app.use(express.static(path.join(__dirname, "/public")));
@@ -27,6 +38,9 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/register"));
 app.use("/auth", require("./routes/auth"));
+app.use("/refresh", require("./routes/refresh"));
+app.use("/logout", require("./routes/logout"));
+app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees"));
 
 // if it doesn't find the route specified
