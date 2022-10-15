@@ -21,7 +21,6 @@ const handleNewUser = async (req, res) => {
   );
   if (duplicate) return res.sendStatus(409);
   // .json({ message: `duplicate user ${username} found` }); // 409 means confilct
-  console.log(duplicate);
   try {
     // encrypt password
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -32,7 +31,6 @@ const handleNewUser = async (req, res) => {
       path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)
     );
-    // console.log(usersDB.users);
     res.status(201).json({ success: `New user ${username} created` });
   } catch (error) {
     res.status(500).json({ message: error.message }); // 500 means server error
