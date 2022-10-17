@@ -472,3 +472,17 @@
 20221016	20:55:00	e9a72191-9d91-4c62-aa48-ff5fe1139c06	POST	undefined	/auth}
 20221016	20:55:51	a72104d0-c05a-471e-a251-30abd8aba9e1	POST	undefined	/auth}
 20221016	20:55:59	b1781fbd-f82e-467b-b431-f088134a2597	POST	undefined	/auth}
+20221017	21:45:31	6a5bf0ea-e8db-4353-b2cd-0deb441dabaf	POST	undefined	/auth}
+20221017	21:46:42	df3558df-ca6f-4d20-844f-ddc271131fbb	POST	undefined	/auth}
+20221017	21:47:04	79d0b726-e3e5-4887-afe2-2973400e8d5f	POST	undefined	/auth}
+20221017	21:47:45	68eedc9b-741a-4033-9e2a-6d502fc95e81	POST	undefined	/auth}
+20221017	21:48:23	e4c7ab1f-b810-4013-ad71-5b2b81f17638	POST	undefined	/auth}
+20221017	21:48:56	ee065ba3-d792-4784-b386-7a334dcce3d7	GET	undefined	/employees}
+20221017	21:50:05	ee065ba3-d792-4784-b386-7a334dcce3d7	POST	undefined	/employees}
+20221017	21:50:12	ee065ba3-d792-4784-b386-7a334dcce3d7	POST	undefined	/employees}
+20221017	21:50:27	ee065ba3-d792-4784-b386-7a334dcce3d7	POST	undefined	/auth}
+20221017	21:50:46	d52ad3e5-87e9-4dbf-9a9e-c5f31304ad4e	POST	undefined	/employees}
+20221017	21:53:07	d52ad3e5-87e9-4dbf-9a9e-c5f31304ad4e	DELETE	undefined	/employees}
+20221017	21:53:20	d52ad3e5-87e9-4dbf-9a9e-c5f31304ad4e	DELETE	undefined	/employees}
+20221017	21:53:24	d52ad3e5-87e9-4dbf-9a9e-c5f31304ad4e	DELETE	undefined	/employees}
+20221017	21:53:39	d52ad3e5-87e9-4dbf-9a9e-c5f31304ad4e	GET	undefined	/employees}

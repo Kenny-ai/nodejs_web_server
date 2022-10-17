@@ -29,7 +29,7 @@ const handleLogin = async (req, res) => {
     const accessToken = jwt.sign(
       { UserInfo: { username: foundUser.username, roles } },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "30s" }
+      { expiresIn: "30m" }
     );
     const refreshToken = jwt.sign(
       { username: foundUser.username },
@@ -46,16 +46,14 @@ const handleLogin = async (req, res) => {
       path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)
     );
-    res
-      .status(201)
-      .json({ accessToken })
-      .cookie("jwt", refreshToken, {
-        domain: "http://localhost:3000",
-        httpOnly: true,
-        sameSite: "None",
-        secure: true,
-        maxAge: 24 * 60 * 60 * 1000,
-      }); // in prod, make sure to add secure:true to only serve on https rather than http
+    res.cookie("jwt", refreshToken, {
+      domain: "http://localhost:3000",
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+      maxAge: 24 * 60 * 60 * 1000,
+    }); // in prod, make sure to add secure:true to only serve on https rather than http
+    res.json({ accessToken });
   } else {
     res.sendStatus(401);
   }
